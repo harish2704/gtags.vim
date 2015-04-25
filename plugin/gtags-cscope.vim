@@ -149,7 +149,7 @@ function! s:GtagsCscope_GtagsRoot()
     let cmd_output = system(cmd)
     if v:shell_error != 0
         if v:shell_error == 3
-            silent !call s:Error('GTAGS not found.')
+            silent call s:Error('GTAGS not found.')
         else
             call s:Error('global command failed. command line: ' . cmd)
         endif
